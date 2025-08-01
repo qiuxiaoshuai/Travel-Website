@@ -1,0 +1,323 @@
+.kuaij {
+    display: flex;                  /* 启用 Flexbox */
+    justify-content: center;        /* 水平居中 */
+    gap: 10px;                      /* 设置子元素之间的间距为10px */
+    margin-top: 10px;               /* 设置与上方元素的间距为10px */
+}
+
+.box {
+    width: 175px;                   /* 每个方块的宽度 */
+    height: 75px;                  /* 每个方块的高度 */
+    color: white;                   /* 文字颜色 */
+    text-align: center;             /* 文字居中 */
+    line-height: 150px;             /* 使文字垂直居中 */
+    border-radius: 8px;             /* 可选，设置圆角 */
+    border: 1px solid rgba(102, 102, 102, 0.3);         /* 设置边框：2px宽，黑色 */
+    position: relative;             /* 启用相对定位，容器内元素可以进行绝对定位 */
+}
+
+/* 左上角的大文字 */
+.top-left {
+    position: absolute;
+    top: -60px;
+    left: 10px;
+    font-size: 20px;                /* 设置大一点的文字 */
+    font-weight: bold;
+	color: #333;
+}
+
+/* 左下角的小文字 */
+.bottom-left {
+    position: absolute;
+    bottom: -55px;
+    left: 10px;
+    font-size: 12px;                /* 设置小一点的文字 */
+	color: #9d9d9d;
+}
+
+/* 图标样式 */
+.icon {
+    position: absolute;
+    right: 10px;
+    top: 65%;                        /* 垂直居中图标 */
+    transform: translateY(-50%);     /* 使图标完全居中 */
+}
+
+.icon img {
+    width: 50px;                    /* 设置图标的大小 */
+    height: auto;
+}
+
+/* 鼠标悬停时的文字样式变化 */
+.box:hover .top-left {
+    color: #FF6347;                 /* 悬停时将左上角文字颜色改为番茄红 */
+}
+
+.box:hover {
+/*    background-color: #333;   */      
+    /* border-color: #FFD700;          /* 悬停时更改边框颜色为金色 */ 
+    transform: scale(1.05);          /* 悬停时略微放大 */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* 导航栏 */
+.search-container {
+    position: absolute;             /* 设置绝对定位 */
+    top: 450px;                      /* 根据需要调整顶部位置 */
+    left: 50%;                       /* 水平居中 */
+    transform: translateX(-50%);    /* 水平居中，垂直位置可以自定义 */
+    display: flex;                  /* 使用 Flexbox 排列搜索框和按钮 */
+    align-items: center;            /* 垂直居中对齐元素 */
+    gap: 10px;                      /* 设置输入框和按钮之间的间距 */
+    z-index: 10;                    /* 确保搜索栏浮在图片之上 */
+}
+
+.search-input {
+    width: 500px;                   /* 设置输入框的宽度 */
+	height: 55px;
+    padding: 10px;                  /* 内边距，使文本与边框之间有间距 */
+    border: 2px solid #ccc;         /* 输入框边框颜色 */
+    border-radius: 4px;             /* 设置输入框的圆角 */
+    font-size: 16px;                /* 设置输入框的字体大小 */
+}
+
+.search-button {
+    padding: 10px 20px;             /* 按钮内边距 */
+    margin-left: 10px;               /* 设置按钮与输入框之间的间距 */
+    background-color: #ff9d00;      /* 按钮背景颜色 */
+    color: white;                   /* 按钮文字颜色 */
+    border: none;                   /* 去掉按钮的默认边框 */
+    border-radius: 4px;             /* 按钮圆角 */
+    font-size: 16px;                /* 按钮字体大小 */
+    cursor: pointer;                /* 鼠标悬停时变为手指 */
+    transition: background-color 0.3s ease; /* 添加按钮的过渡效果 */
+}
+
+.search-button:hover {
+    background-color: #FF6347;      /* 鼠标悬停时改变按钮的背景颜色 */
+}
+
+/* 搜索框的背景 */
+.search-background {
+    background-color: rgba(0, 0, 0, 0.5); /* 黑色半透明背景 */
+    padding: 30px;                      /* 为背景增加内边距 */
+    border-radius: 5px;                 /* 背景容器的圆角 */
+}
+
+.search-icon{
+	width: 30px;
+}
+
+/* 下面部分 */
+
+.layout-container {
+    display: flex; /* 使用 Flexbox 布局 */
+   justify-content: center; /* 左右对齐 */
+    height: 100vh; /* 设置容器高度为视口高度 */
+    padding: 20px; /* 容器内边距 */
+}
+
+.layout-left {
+    width: 450px; /* 左侧占 30% 宽度 */
+    height: auto; /* 自适应高度 */
+    padding: 20px; /* 内容内边距 */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); *//* 添加阴影 */
+    border-radius: 6px; /* 圆角 */
+}
+
+.layout-right {
+    width: 830px; /* 右侧占 70% 宽度 */
+    height: auto; /* 自适应高度 */
+/*    background-color: #fffbe6; /* 右侧背景颜色 */ 
+/*    border: 1px solid #ccc; /* 边框 */ 
+    padding: 20px; /* 内容内边距 */
+/*    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影 */ 
+    border-radius: 6px; /* 圆角 */
+}
+
+/* 响应式布局 */
+@media (max-width: 768px) {
+    .layout-container {
+        flex-direction: column; /* 改为纵向排列 */
+        align-items: stretch; /* 拉伸子元素 */
+    }
+
+    .layout-left, .layout-right {
+        width: 100%; /* 占满宽度 */
+        margin-bottom: 20px; /* 增加底部间距 */
+    }
+}
+
+.layout-left-right {
+    display: flex; /* 使用 Flexbox 布局 */
+    justify-content: flex-end; /* 控制内容从左向右排列 */
+    margin-left: auto; /* 让内容向右偏移 */
+    margin-right: 120px; /* 自定义距离右侧的间距 */
+    margin-bottom: 1px; /* 与其他内容区分的间距 */
+}
+
+
+.layout-left-right img {
+    width: 300px; /* 控制图片宽度 */
+    height: auto; /* 保持图片比例 */
+}
+
+.layout-enir{
+	margin-top: 20px;
+	display: flex; /* 设置为 Flexbox 布局 */
+	align-items: center; /* 垂直居中对齐 */
+	justify-content: space-between; /* 左右分开 */
+}
+
+.layout-enir h4 {
+	color: #333;
+	font-size: 24px;
+}
+
+.layout-enir a{
+	text-decoration: none;
+	color: #999;
+	float: right;
+	font-size: 14px;
+}
+
+.layout-hulun {
+	margin-top: 10px;
+}
+
+.layout-hulun img{
+	width: 400px;
+}
+
+.layout-hulun p{
+	color: #333;
+	margin-top: 5px;
+	font-size: 19px;
+}
+
+.layout-zixun {
+	margin-top: 40px;
+}
+
+.layout-zixun h4 {
+	font-size: 24px;
+	color: #333;
+}
+
+.layout-zixun li{
+	color: #333;
+	margin-top: 10px;
+	list-style: none;
+	width: 400px;
+	line-height: 30px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	position: relative;
+}
+
+
+/* 下面右边部分 */
+.layout-right-youji {
+    display: flex; /* 使用 Flexbox 布局 */
+    justify-content: space-between; /* 在两者之间留出间距 */
+    align-items: center; /* 垂直居中对齐 */
+    margin-bottom: 20px; /* 可根据需要添加间距 */
+}
+
+.layout-right-youji h4 {
+    margin: 0; /* 去掉默认的外边距 */
+	color: #ff9d00;
+	font-size: 35px;
+}
+
+.layout-right-youji button {
+    display: flex;
+    align-items: center; /* 垂直居中图标和文字 */
+    padding: 8px 36px;
+    background-color: #ff9d00; /* 按钮背景色 */
+    color: white; /* 按钮文字颜色 */
+    border: none; /* 去掉默认边框 */
+    border-radius: 4px; /* 圆角按钮 */
+    cursor: pointer; /* 鼠标悬停时变为指针 */
+    font-size: 24px;
+    width: 190px;
+    height: 40px;
+}
+
+.layout-right-youji button:hover {
+    background-color: #FF6347; /* 鼠标悬停时的按钮背景色 */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* 添加阴影 */
+}
+
+.layout-right-youji img {
+    width: 24px; /* 控制图标大小 */
+    margin-right: 8px; /* 图标和文字之间的间距 */
+}
+
+.lvli {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+
+
+.layout-right-wenb {
+    display: flex; /* 使用 Flexbox 布局 */
+    align-items: center; /* 垂直居中对齐 */
+    gap: 10px; /* 图片与文字之间的间距 */
+    transition: background-color 0.3s ease; /* 使背景颜色变化更平滑 */
+    padding: 20px; /* 内容内边距 */
+}
+
+.layout-right-wenb img {
+    width: 251px; /* 图片宽度 */
+    height: 200px; /* 图片高度自适应 */
+    transition: background-color 0.3s ease; /* 图片背景颜色变化平滑 */
+}
+
+.layout-right-wenb-text {
+    display: flex; /* 使用 Flexbox 布局 */
+    flex-direction: column; /* 垂直排列子元素 */
+    gap: 10px; /* 文字之间的间距 */
+}
+
+.layout-right-wenb-text span {
+    font-size: 24px; /* 文字大小 */
+    color: #333; /* 默认文字颜色 */
+    transition: color 0.3s ease; /* 文字颜色变化平滑 */
+}
+
+/* 鼠标悬停时 */
+.layout-right-wenb:hover {
+    background-color: rgba(102, 102, 102, 0.1); /* 半透明背景颜色 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 加上阴影：水平偏移、垂直偏移、模糊半径、阴影颜色 */
+}
+
+.layout-right-wenb:hover .layout-right-wenb-text span {
+    color: #FF6347; /* 文字颜色变化 */
+}
+
+.inline-elements {
+    display: flex; /* 使用 Flexbox 布局 */
+    align-items: center; /* 垂直居中对齐 */
+    gap: 10px; /* 图片与文字之间的间距 */
+	margin-top: 10px;
+	font-size: 20;
+	color: #333; /* 默认文字颜色 */
+}
+
+.inline-elements img {
+    width: 20px; /* 设置图片宽度 */
+    height: auto; /* 图片高度自适应 */
+}
+
+.inline-toxinag {
+	border-radius: 50%; /* 使图片变为圆形 */
+	object-fit: cover; /* 确保图片裁剪适合圆形区域 */
+}
+
+.inline-p {
+	color: #FF6347; /* 文字颜色变化 */
+}

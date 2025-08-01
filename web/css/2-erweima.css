@@ -1,0 +1,40 @@
+/* 将整个页面内容垂直居中 */
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;  /* 水平居中 */
+    align-items: center;  /* 垂直居中 */
+}
+
+/* 容器设置为 flex 布局，垂直排列子元素 */
+.container {
+    display: flex;
+    flex-direction: column;  /* 子元素垂直排列 */
+    align-items: center;  /* 水平居中 */
+    gap: 20px;  /* 子元素之间的间距 */
+    text-align: center;  /* 确保文本居中 */
+}
+
+/* 登录选项样式 */
+.login-option {
+    display: flex;
+    align-items: center;  /* 图标和文本垂直居中 */
+    justify-content: center;  /* 水平居中 */
+}
+
+.login-option img {
+    width: 40px;  /* 调整图标的大小 */
+    height: 40px;  /* 调整图标的大小 */
+    margin-right: 10px;  /* 图标和文本之间的间距 */
+}
+
+.login-option p {
+    font-size: 20px;
+    color: #333;
+}
+
+.login-option-ewm img {
+	width: 400px;  /* 调整图标的大小 */
+	height: 400px;  /* 调整图标的大小 */
+}

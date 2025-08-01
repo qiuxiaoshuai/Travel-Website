@@ -1,0 +1,182 @@
+*{
+    /* 初始化 */
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    height: 100vh; /* 确保页面高度为100% */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    background: url('../img/富士山.jpg') no-repeat center center; /* 背景居中且不重复 */
+    background-size: cover; /* 背景图片覆盖整个视口 */
+    margin: 0; /* 移除默认的 body margin */
+    padding: 0; /* 移除默认的 body padding */
+}
+.container{
+    background-color: #fff;
+    width: 975px;
+    height: 622.5px;
+    border-radius: 5px;
+    /* 阴影 */
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
+    /* 相对定位 */
+    position: relative;
+}
+.form-box{
+    /* 绝对定位 */
+    position: absolute;
+    top: -10%;
+    left: 5%;
+    background-color: #ff6347; /* 番茄红 */
+    width: 480px;
+    height: 750px;
+    border-radius: 5px;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    /* 动画过渡 加速后减速 */
+    transition: 0.7s ease-in-out;
+}
+.register-box, .login-box{
+    /* 弹性布局 垂直排列 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.hidden{
+    display: none;
+    transition: 0.5s;
+}
+h1{
+    text-align: center;
+    margin-bottom: 25px;
+    /* 大写 */
+    text-transform: uppercase;
+    color: #fff;
+    /* 字间距 */
+    letter-spacing: 5px;
+}
+input{
+    background-color: transparent;
+    width: 70%;
+    color: #fff;
+    border: none;
+    /* 下边框样式 */
+    border-bottom: 1px solid rgba(255,255,255,0.4);
+    padding: 10px 0;
+    text-indent: 10px;
+    margin: 8px 0;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+input::placeholder{
+    color: #fff;
+}
+input:focus{
+    /* color: #ff1493; /* 深粉色 */ */
+	color: #fff;
+    outline: none;
+    border-bottom: 1px solid #ff149380;
+    transition: 0.5s;
+}
+input:focus::placeholder{
+    opacity: 0;
+}
+.form-box button{
+    width: 70%;
+    margin-top: 35px;
+    /* background-color: #ff6347; */
+	background-color: aliceblue;
+    outline: none;
+    border-radius: 8px;
+    padding: 13px;
+    /* color: #fff; */
+	color: black;
+    letter-spacing: 2px;
+    border: none;
+    cursor: pointer;
+}
+.form-box button:hover{
+    background-color: #ff1493; /* 深粉色 */
+    color: #fff;
+    transition: background-color 0.5s ease;
+}
+.con-box{
+    width: 50%;
+    /* 弹性布局 垂直排列 居中 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* 绝对定位 居中 */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.con-box.left{
+    left: -2%;
+}
+.con-box.right{
+    right: -2%;
+}
+.con-box h2{
+    color: #ff4500; /* 橙红色 */
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-align: center;
+    margin-bottom: 4px;
+}
+.con-box p{
+    font-size: 15px;
+    letter-spacing: 2px;
+    color: #ff4500; /* 橙红色 */
+    text-align: center;
+}
+.con-box span{
+    color: #ff7f50; /* 橙色 */
+}
+.con-box img{
+    width: 150px;
+    height: 150px;
+    opacity: 0.9;
+    margin: 40px 0;
+}
+.con-box button{
+    margin-top: 3%;
+    background-color: #fff;
+    color: #ff6347; /* 番茄红 */
+    border: 1px solid #ff6347; /* 番茄红 */
+    padding: 6px 10px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    outline: none;
+    cursor: pointer;
+}
+.con-box button:hover{
+    background-color: #ff1493; /* 深粉色 */
+    color: #fff;
+}
+
+.social-icons {
+	display: flex;
+	gap: 15px; /* 设置图片之间的间距为 15px */
+	position: absolute; /* 让 div 绝对定位 */
+	bottom: 180px; /* 设置距离页面底部 200px */
+	left: 90px; /* 设置距离页面左侧 300px */
+}
+
+.social-icons img {
+	width: 40px; /* 设置图片宽度为 50px */
+	height: auto; /* 保持图片的宽高比 */
+}
+form {
+	width: 100%;
+	display: flex;
+	flex-direction: column;  /* 垂直排列表单元素 */
+	align-items: center;
+}

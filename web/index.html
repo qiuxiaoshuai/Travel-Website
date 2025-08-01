@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页</title>
+	<link rel="stylesheet" href="css/3-daohanlan.css" />
+	<link rel="stylesheet" href="css/4-lunbotu.css" />
+	<link rel="stylesheet" href="css/0-zhuye.css" />
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <a href="#">丘小帅的旅游网站</a>
+            </div>
+            <div class="nav-links">
+                <a href="#">首页</a>
+                <a href="#">攻略群</a>
+                <div class="dropdown">
+                    <a href="mdd.html" class="dropbtn">去旅行</a>
+                    <div class="dropdown-content">
+                        <a href="#">跟团</a>
+                        <a href="#">飞机</a>
+                        <a href="#">高铁</a>
+                    </div>
+                </div>
+                <a href="#">旅游攻略</a>
+                <a href="#">定酒店</a>
+                <a href="guanyu.html">关于我们</a>
+				<a href="php/profile.php">个人主页</a>
+            </div>
+        </div>
+    </div>
+
+	<div class="container">
+	        <div class="imgs">
+	            <a href="#" class="active">
+					<img src="img/富士山.jpg" alt="" />
+					<span class="img-text-a">16/Dec.2024</span>
+					<span class="img-text-b">踏上富士山的旅程，雪顶映照着清晨的阳光</span>
+				</a>
+	            <a href="#">
+					<img src="img/南极.png" alt="" />
+					<span class="img-text-a">17/Dec.2024</span>
+					<span class="img-text-c">那么美的南极我终于到了！！！！</span>
+	            </a>
+	            <a href="#">
+	                <img src="img/树.jpg" alt="">
+					<span class="img-text-a">18/Dec.2024</span>
+					<span class="img-text-d">中国东莞的松山湖</span>
+	            </a>
+	            <a href="#">
+	                <img src="img/丽水.jpeg" alt="">
+					<span class="img-text-a">19/Dec.2024</span>
+					<span class="img-text-e">丽水自驾游探索山水间的自驾游</span>
+	            </a>
+
+	        </div>
+	        <div class="shades">
+	            <div class="left"></div>
+	            <div class="top"></div>
+	            <div class="right"></div>
+	            <div class="bottom"></div>
+	        </div>
+	        <div class="titles">
+	            <a href="#" class="active">
+	                <div class="title">富士山</div>
+	                <div class="title2">富士山下，心归宁静</div>
+	            </a>
+	            <a href="#">
+	                <div class="title">南极</div>
+	                <div class="title2">探秘南极，逐梦极寒</div>
+	            </a>
+	            <a href="#">
+	                <div class="title">松山湖</div>
+	                <div class="title2">松湖碧水，生态人间</div>
+	            </a>
+	            <a href="#">
+	                <div class="title">丽水</div>
+	                <div class="title2">丽水山川，诗画江南</div>
+	            </a>
+	        </div>
+			<div class="search-container search-background">
+				<input type="text" class="search-input" placeholder="搜索目的地/攻略酒店" id="searchInput" />
+				<button class="search-button" onclick="search()">
+					<img src="img/搜索.png" alt="搜索图标" class="search-icon" />
+				</button>
+			</div>
+			<!-- 当用户输入内容时直接跳转到百度 -->
+			<script src="js/4-搜索.js"></script>
+	    </div>
+		<div class="kuaij">
+			<a href="index.html">
+				<div class="box">
+					<div class="top-left">攻略群</div>
+					<div class="bottom-left">实时交流有问必答</div>
+					<div class="icon">
+						<img src="img/群聊.png" alt="图标" />
+					</div>
+				</div>
+			</a>
+			<a href="">
+				<div class="box">
+					<div class="top-left">当地游</div>
+					<div class="bottom-left">最地道的玩法体验</div>
+					<div class="icon">
+						<img src="img/热气球.png" alt="图标" />
+					</div>
+				</div>
+			</a>
+			<a href="">
+				<div class="box">
+					<div class="top-left">自由行</div>
+					<div class="bottom-left">旅游要更自在</div>
+					<div class="icon">
+						<img src="img/飞机.png" alt="图标" />
+					</div>
+				</div>
+			</a>
+			<a href="">
+				<div class="box">
+					<div class="top-left">跟团游</div>
+					<div class="bottom-left">行程透明省心游</div>
+					<div class="icon">
+						<img src="img/导航.png" alt="图标" />
+					</div>
+				</div>
+			</a>
+			<a href="">
+				<div class="box">
+					<div class="top-left">定酒店</div>
+					<div class="bottom-left">一键全网比价</div>
+					<div class="icon">
+						<img src="img/酒店.png" alt="图标" />
+					</div>
+				</div>
+			</a>
+			<a href="">
+				<div class="box">
+					<div class="top-left">签证</div>
+					<div class="bottom-left">出签率最高服务佳</div>
+					<div class="icon">
+						<img src="img/电脑.png" alt="图标" />
+					</div>
+				</div>
+			</a>
+			<a href="">
+				<div class="box">
+					<div class="top-left">团购</div>
+					<div class="bottom-left">到哪都省钱</div>
+					<div class="icon">
+						<img src="img/团购-01.png" alt="图标" />
+					</div>
+				</div>
+			</a>
+
+		</div>
+		
+		<div class="layout-container">
+			<div class="layout-left">
+				<div class="layout-left-right">
+					<img src="img/安全提示.png" alt="" />
+				</div>
+				<div class="layout-enir">
+					<h4>旅游攻略推荐</h4>
+					<a href="baidu.com">更多</a>
+				</div>
+				<div class="layout-hulun">
+					<img src="img/呼伦贝而.jpeg" alt="" />
+					<p>呼伦贝尔旅游攻略,快来一场说走就走的旅行吧</p>
+				</div>
+				<div class="layout-zixun">
+					<h4>小帅的旅游网最新资讯</h4>
+					<ul>
+						<li><strong>12月14日</strong> 旅游业回暖，2024年全球旅游趋势报告发布</li>
+						<li><strong>12月15日</strong> “低碳旅游”成热潮，绿色出行成2024年旅游新趋势</li>
+						<li><strong>12月16日</strong> 2024年冬季旅行推荐：雪景胜地与温泉度假地</li>
+						<li><strong>12月17日</strong> 向全球推广中国文化，2024年中国旅游宣传策略发布</li>
+						<li><strong>12月18日</strong> 马蜂窝“云旅游”直播：虚拟旅行平台的未来</li>
+						<li><strong>12月19日</strong> 亲子旅游成主流，2024年家庭旅游攻略推荐</li>
+						<li><strong>12月20日</strong> 2024年十大热门旅游城市出炉，哪些地方最吸引游客？</li>
+						<li><strong>12月21日</strong> 手游与旅行结合，如何通过手机应用提升旅游体验？</li>
+					</ul>
+				</div>
+			</div>
+			<div class="layout-right">
+				<div class="layout-right-youji">
+					<h4>热门游记</h4>
+					<button>
+							<img src="img/填写.png" alt="" />写游记
+					</button>
+				</div>
+				<div class="lvli"></div>
+				
+			<div class="layout-right-wenb">
+				<img src="img/长安.jpeg" alt="长安" />
+				<div class="layout-right-wenb-text">
+					<span>长安 | 三月里</span>
+					<p>想到长安，是大唐盛世； 念到长安，是十三朝古都。 去看看的念头，萌生的很快啊，也很简单和淳朴 —— 近年来本来游客就络绎不绝。加之2024年除夕夜《山河诗长安》的精彩绝艳，让这座古城聚焦了更多的视线。 焦虑了，再不去，是不是就更贵了...</p>
+					<div class="inline-elements">
+						<img src="img/定位.png" alt="定位" />
+						<P>西安,by&nbsp;&nbsp;</P>
+						<img src="img/头像1.jpg" alt="头像" class="inline-toxinag" />
+						<p class="inline-p">小帅的狗腿子</p>
+						<img src="img/眼睛.png" alt="眼睛" />
+						<p>10.3W</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="layout-right-wenb">
+				<img src="img/牵手看世界.jpeg" alt="长安" />
+				<div class="layout-right-wenb-text">
+					<span>牵手看世界</span>
+					<p>2024年08月06日，我向自己预约了这篇游记，当时我说： Aloha, Hawaii, I'm coming soon! Aloha Aloha 欢迎来到这里 和我一起探索 夏威夷 的秘密。。。 原来四季的更迭竟抵不过早晚的温差 原...</p>
+					<div class="inline-elements">
+						<img src="img/定位.png" alt="定位" />
+						<P>夏威夷,by</P>
+						<img src="img/头像2.jpg" alt="头像" class="inline-toxinag" />
+						<p class="inline-p">小帅的头号粉丝</p>
+						<img src="img/眼睛.png" alt="眼睛" />
+						<p>19.7W</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="layout-right-wenb">
+				<img src="img/马来西亚.jpeg" alt="长安" />
+				<div class="layout-right-wenb-text">
+					<span>马来西亚的夏天永不停歇</span>
+					<p>2024年08月06日，我向自己预约了这篇游记，当时我说： Aloha, Hawaii, I'm coming soon! Aloha Aloha 欢迎来到这里 和我一起探索 夏威夷 的秘密。。。 原来四季的更迭竟抵不过早晚的温差 原...</p>
+					<div class="inline-elements">
+						<img src="img/定位.png" alt="定位" />
+						<P>马来西亚,by</P>
+						<img src="img/头像3.jpg" alt="头像" class="inline-toxinag" />
+						<p class="inline-p">小帅的追随者</p>
+						<img src="img/眼睛.png" alt="眼睛" />
+						<p>29.6W</p>
+					</div>
+				</div>
+			</div>
+	
+
+
+			</div>
+		</div>
+
+
+
+
+	
+
+
+</body>
+</html>
+<script src="js/4-lunbotu.js"></script>

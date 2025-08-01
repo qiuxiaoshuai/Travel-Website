@@ -1,0 +1,152 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+/*    color: #333; */
+}
+
+/* 导航栏样式 */
+.navbar {
+    background-color: #333;
+    padding: 10px 20px;
+/* 	z-index: 1000; */
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Logo的样式 */
+.navbar .logo a {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    padding-left: 20px; /* 使用padding-left代替margin-left */
+}
+
+/* 导航链接样式 */
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    display: block;
+}
+
+.nav-links a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+/* 下拉菜单样式 */
+.dropdown {
+    position: relative;
+}
+
+.dropdown .dropbtn {
+    color: #fff;
+    font-size: 18px;
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none; /* 默认隐藏 */
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    margin-top: 10px;
+    max-height: 0; /* 初始时，菜单是收缩的 */
+    overflow: hidden;
+    padding-top: 0;
+    padding-bottom: 0;
+    visibility: hidden;
+    transition: all 30s ease-in-out; /* 使用所有属性的过渡，增加平滑效果 */
+}
+
+/* 增加下拉选项的高度和padding */
+.dropdown-content a {
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #575757;
+}
+
+/* 鼠标悬停时显示下拉菜单 */
+.dropdown:hover .dropdown-content {
+    display: block;
+    max-height: none;  /* 不设置最大高度，自动展开 */
+    visibility: visible;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* 页面内容 */
+.content {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.content h1 {
+    font-size: 36px;
+    color: #333;
+}
+
+.content p {
+    font-size: 20px;
+    color: #555;
+	gap:10px;
+}
+
+
+/* 用户头像和用户名的样式 */
+.user-info {
+    display: flex;               /* 使用 flexbox 布局，确保头像和用户名在同一行 */
+    align-items: center;         /* 垂直居中对齐头像和用户名 */
+}
+
+.user-info a {
+    display: flex;               /* 确保链接中的内容也使用 flex 布局 */
+    align-items: center;         /* 垂直居中对齐图片和文字 */
+    text-decoration: none;       /* 移除链接的下划线 */
+}
+
+.user-info .user-avatar {
+    width: 45px;                 /* 设置头像的宽度 */
+    height: 45px;                /* 设置头像的高度 */
+    border-radius: 50%;          /* 保持头像为圆形 */
+	margin-right: 20px; 
+}
+
+.user-info .username {
+    font-size: 20px;             /* 设置字体大小 */
+    color: #fff;                 /* 设置用户名为白色 */
+    text-decoration: none;       /* 移除下划线 */
+    display: inline-block;       /* 确保用户名是行内元素，支持上下对齐 */
+}
+
+

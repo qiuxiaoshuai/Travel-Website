@@ -1,0 +1,349 @@
+
+/* 基本布局 */
+.mdd-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    height: 500px;
+    background-color: #f4f4f4;
+}
+
+.mdd-box {
+    display: flex;
+    width: 1000px;
+	height: 400px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* 左侧导航栏样式 */
+.mdd-sidebar {
+    width: 130px;
+    background-color: #2c3e50;
+    padding: 15px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.mdd-sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mdd-sidebar li {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.mdd-nav-link {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 20px;
+    display: block;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.mdd-nav-link:hover {
+    background-color: #34495e;
+}
+
+/* 右侧内容区域 */
+.mdd-content {
+    flex-grow: 1;
+    padding: 20px;
+	width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* 内容项样式 */
+.mdd-content-item {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.mdd-content-item.active {
+    display: block;
+    opacity: 1;
+}
+
+/* 选中内容项时显示 */
+.mdd-content-item h2 {
+    font-size: 24px;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.mdd-content-item p {
+    font-size: 16px;
+    color: #7f8c8d;
+}
+
+/* 激活的链接样式 */
+.mdd-nav-link.active {
+    background-color: #16a085;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 右边部分 */
+
+
+
+
+
+
+.mdd-content {
+    position: relative;
+}
+
+.mdd-input-wrapper {
+    position: relative;
+}
+
+.popular-cities-container {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 80%; /* 设置宽度为 80%，可以调整更小 */
+    max-height: none; /* 去掉最大高度，确保所有内容可以显示 */
+    background-color: white;
+    border: 1px solid #ccc;
+    display: none;
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影使其更突出 */
+    border-radius: 8px; /* 圆角边框 */
+    padding: 10px; /* 添加内边距，防止文字贴边 */
+}
+
+.popular-cities-container h2 {
+    margin: 0;
+    padding: 10px;
+    background-color: #f0f0f0;
+    font-size: 14px; /* 适当调整标题字体大小 */
+    text-align: center; /* 居中文本 */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; /* 使用固定布局，强制所有列均匀分配空间 */
+}
+
+td, th {
+    padding: 8px;
+    text-align: center;
+    border: none; /* 去掉边框 */
+    font-size: 12px; /* 调整字体大小 */
+    white-space: nowrap; /* 禁止文本换行 */
+}
+
+td {
+    cursor: pointer; /* 鼠标指针变成手型，表示可点击 */
+}
+
+td:hover {
+    background-color: #f0f0f0; /* 鼠标悬停时改变背景色 */
+}
+
+/* 输入框样式 */
+.mdd-input {
+    padding: 12px 20px;
+    font-size: 14px;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    background-color: #fff;
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    outline: none;
+    transition: all 0.3s ease;
+    width: 48%;
+}
+
+/* 输入框聚焦时的样式 */
+.mdd-input:focus {
+    border-color: #4A90E2;
+    box-shadow: 0 0 8px rgba(74, 144, 226, 0.4);
+    background-color: #f9f9f9;
+}
+
+/* 输入框的提示文字样式 */
+.mdd-input::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+/* 输入框外部包装容器的样式 */
+.mdd-input-wrapper {
+    width: 100%;
+}
+
+/* 第一行布局：使用Flexbox */
+.input-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+
+.mdd-input-wrapper-mv {
+    display: flex;
+    justify-content: space-between; /* 在一行中让两个元素左右分布 */
+    align-items: center; /* 垂直居中对齐 */
+    margin-bottom: 15px; /* 给容器加一点下边距 */
+}
+
+.mdd-input-wrapper-mv p {
+	font-family: 'Arial', sans-serif;
+    font-size: 24px; /* 调整字体大小 */
+    color: black; /* 设置字体颜色 */
+}
+
+.mdd-input-wrapper-departure{
+	margin-left: 20px;
+}
+
+.mdd-input-wrapper-destination{
+	margin-right: 310px;
+}
+
+
+
+/* 按钮样式 */
+.buttons {
+	width: 150px;
+	margin-top: 60px;
+	margin-left: 600px;
+	padding: 10px 20px;
+	font-size: 16px;
+	background-color: #4CAF50; /* 绿色背景 */
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.buttons:hover {
+	background-color: #45a049; /* 悬停时的背景色 */
+}
+
+
+/* 父容器，使用Flexbox布局 */
+.mdd-flex-container-layout {
+	display: flex;
+	flex-wrap: wrap; /* 使元素自动换行 */
+	justify-content: space-between; /* 元素之间的间隔 */
+	gap: 10px; /* 设置元素之间的间距 */
+	width: 100%;
+	max-width: 960px; /* 最大宽度 */
+	margin: 0 auto; /* 水平居中 */
+	height: 500px;
+	margin-top: 20px;
+}
+
+/* 每个子div的样式 */
+.mdd-flex-item-box {
+	width: 24%; /* 每个div占据父容器的48% */
+	height: 240px;
+	background-color: #4CAF50;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 16px;
+	border-radius: 5px;
+	flex-direction: column; /* 图片和文字竖直排列 */
+	align-items: center; /* 内容居中 */
+	background-color: #f0f0f0; /* 背景色 */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+}
+.text-content{
+	text-align: left;
+	color: #333;
+	width: 100%; /* 使文字内容充满整个宽度 */
+}
+
+.mdd-flex-item-box .image {
+    width: 100%; /* 图片宽度100% */
+    height: auto; /* 高度自适应 */
+    margin-bottom: 15px; /* 图片和文字之间的间隔 */
+}
+
+.mdd-flex-biao {
+    display: flex;
+    flex-wrap: wrap; /* 内容溢出时自动换行 */
+    gap: 15px; /* 设置p标签之间的间距 */
+    justify-content: flex-start; /* 将p标签放在左侧，若需居中可调整为 center */
+    margin-left: 500px; /* 调整容器左边距 */
+    margin-bottom: 10px; /* 去掉默认的底部外边距 */
+    margin-top: auto; /* 自动将容器推到父容器的底部 */
+}
+
+/* 每个p标签的样式 */
+.mdd-flex-biao p {
+	text-decoration: none;
+    font-size: 20px;
+	margin-top: auto;
+    cursor: pointer; 
+    margin-top: 10px;
+    margin-bottom: 0px;
+	}
+
+/* 点击后的下划线样式 */
+.mdd-flex-biao p.clicked {
+    text-decoration: underline;
+	font-size: 22px;
+	color: #45a049;
+    text-decoration-color: #45a049; /* 蓝色下划线 */
+}
+
+
+.line2 {
+    display: flex; /* 使用flexbox布局 */
+    justify-content: space-between; /* 左右两边内容分别对齐 */
+    align-items: center; /* 垂直居中 */
+    font-size: 16px; /* 设置普通字体大小 */
+    color: #333; /* 普通文字颜色 */
+    margin: 5px 0; /* 控制每行文字之间的间距 */
+}
+
+.line2 .title {
+    font-size: 16px; /* 左侧文字字体大小 */
+    color: #333; /* 左侧文字颜色 */
+}
+
+.line2 .price {
+    font-size: 24px; /* 右侧价格字体更大 */
+    color: red; /* 价格文字颜色为红色 */
+    font-weight: bold; /* 价格字体加粗 */
+}
+
+.line2 .price span {
+    font-size: 14px; /* 设置“起”字的字体大小 */
+    font-weight: normal; /* “起”字的字体样式恢复普通 */
+    color: #333; /* "起"字的颜色设置为普通颜色 */
+}

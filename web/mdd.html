@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>旅游目的地</title>
+	<link rel="stylesheet" href="css/3-daohanlan.css" />
+    <link rel="stylesheet" href="css/6-mdd.css">
+</head>
+<body>
+	<div class="navbar">
+	    <div class="navbar-container">
+	        <div class="logo">
+	            <a href="#">丘小帅的旅游网站</a>
+	        </div>
+	        <div class="nav-links">
+	            <a href="index.html">首页</a>
+	            <a href="#">攻略群</a>
+	            <div class="dropdown">
+	                <a href="mdd.html" class="dropbtn">去旅行</a>
+	                <div class="dropdown-content">
+	                    <a href="#">跟团</a>
+	                    <a href="#">飞机</a>
+	                    <a href="#">高铁</a>
+	                </div>
+	            </div>
+	            <a href="#">旅游攻略</a>
+	            <a href="#">定酒店</a>
+	            <a href="guanyu.html">关于我们</a>
+				<a href="php/profile.php">个人主页</a>
+	        </div>
+	    </div>
+	</div>
+	<div class="mdd-container">
+		<div class="mdd-box">
+			<!-- 左侧导航栏 -->
+			<div class="mdd-sidebar">
+				<ul>
+					<li><a href="#" class="mdd-nav-link" data-target="content1">火车票</a></li>
+					<li><a href="#" class="mdd-nav-link" data-target="content2">机票</a></li>
+					<li><a href="#" class="mdd-nav-link" data-target="content3">酒店</a></li>
+					<li><a href="#" class="mdd-nav-link" data-target="content4">景点</a></li>
+				</ul>
+			</div>
+
+			<!-- 右侧内容区域 -->
+			<div class="mdd-content">
+				<div id="content1" class="mdd-content-item active">
+					<!-- 出发地和目的地输入框及下拉框 -->
+					<div class="mdd-input-wrapper">
+						<div class="mdd-input-wrapper-mv">
+							<p class="mdd-input-wrapper-departure">出发地</p>
+							<p class="mdd-input-wrapper-destination">目的地</p>
+						</div>
+						<div class="input-row">
+							<!-- 第一行两个输入框：出发地和目的地 -->
+							<input type="text" id="departure" class="mdd-input" placeholder="请输入出发地" readonly>
+							<input type="text" id="destination" class="mdd-input" placeholder="请输入目的地" readonly>
+							<!-- 出发地的城市下拉框 -->
+							<div id="departure-cities" class="popular-cities-container" style="display: none;">
+								<h2>热门城市（出发地）</h2>
+								<table>
+									<tr>
+										<th colspan="3">热门城市</th>
+										<th colspan="3">ABCDEF</th>
+										<th colspan="3">GHJKLM</th>
+										<th colspan="3">NPQRS</th>
+										<th colspan="3">TWXYZ</th>
+									</tr>
+									<tr>
+										<td>香港</td><td>北京</td><td>澳门</td>
+										<td>重庆</td><td>台北</td><td>成都</td>
+										<td>广州</td><td>上海</td><td>昆明</td>
+										<td>西安</td><td>深圳</td><td>郑州</td>
+										<td>贵阳</td><td>杭州</td><td>长沙</td>
+									</tr>
+									<tr>
+										<td>哈尔滨</td><td>厦门</td><td>海口</td>
+										<td>武汉</td><td>三亚</td><td>南京</td>
+										<td>青岛</td><td>天津</td><td>大连</td>
+										<td>温州</td>
+									</tr>
+								</table>
+							</div>
+							<!-- 目的地的城市下拉框 -->
+							<div id="destination-cities" class="popular-cities-container" style="display: none;">
+								<h2>热门城市（目的地）</h2>
+								<table>
+									<tr>
+										<th colspan="3">热门城市</th>
+										<th colspan="3">ABCDEF</th>
+										<th colspan="3">GHJKLM</th>
+										<th colspan="3">NPQRS</th>
+										<th colspan="3">TWXYZ</th>
+									</tr>
+									<tr>
+										<td>香港</td><td>北京</td><td>澳门</td>
+										<td>重庆</td><td>台北</td><td>成都</td>
+										<td>广州</td><td>上海</td><td>昆明</td>
+										<td>西安</td><td>深圳</td><td>郑州</td>
+										<td>贵阳</td><td>杭州</td><td>长沙</td>
+									</tr>
+									<tr>
+										<td>哈尔滨</td><td>厦门</td><td>海口</td>
+										<td>武汉</td><td>三亚</td><td>南京</td>
+										<td>青岛</td><td>天津</td><td>大连</td>
+										<td>温州</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					<div class="mdd-input-wrapper-mv">
+						<p class="mdd-input-wrapper-departure">出发时间</p>
+					</div>
+					<div class="input-row">
+						<!-- 第二行输入框：选择出发日期 -->
+						
+						<input type="date" id="travel-date" class="mdd-input" placeholder="选择出发日期">
+					</div>
+					
+					<div class="mdd-input-container">
+						<button class="buttons">搜索</button>
+					</div>
+				</div>
+				</div>
+				<div id="content2" class="mdd-content-item">
+					<div class="mdd-input-wrapper">
+							<div class="mdd-input-wrapper-mv">
+								<p class="mdd-input-wrapper-departure">出发地</p>
+								<p class="mdd-input-wrapper-destination">目的地</p>
+							</div>
+							<div class="input-row">
+								<!-- 第一行两个输入框：出发地和目的地 -->
+								<input type="text" id="departure" class="mdd-input" placeholder="请输入出发地" readonly>
+								<input type="text" id="destination" class="mdd-input" placeholder="请输入目的地" readonly>
+								<!-- 出发地的城市下拉框 -->
+								<div id="departure-cities" class="popular-cities-container" style="display: none;">
+									<h2>热门城市（出发地）</h2>
+									<table>
+										<tr>
+											<th colspan="3">热门城市</th>
+											<th colspan="3">ABCDEF</th>
+											<th colspan="3">GHJKLM</th>
+											<th colspan="3">NPQRS</th>
+											<th colspan="3">TWXYZ</th>
+										</tr>
+										<tr>
+											<td>香港</td><td>北京</td><td>澳门</td>
+											<td>重庆</td><td>台北</td><td>成都</td>
+											<td>广州</td><td>上海</td><td>昆明</td>
+											<td>西安</td><td>深圳</td><td>郑州</td>
+											<td>贵阳</td><td>杭州</td><td>长沙</td>
+										</tr>
+										<tr>
+											<td>哈尔滨</td><td>厦门</td><td>海口</td>
+											<td>武汉</td><td>三亚</td><td>南京</td>
+											<td>青岛</td><td>天津</td><td>大连</td>
+											<td>温州</td>
+										</tr>
+									</table>
+								</div>
+								<!-- 目的地的城市下拉框 -->
+								<div id="destination-cities" class="popular-cities-container" style="display: none;">
+									<h2>热门城市（目的地）</h2>
+									<table>
+										<tr>
+											<th colspan="3">热门城市</th>
+											<th colspan="3">ABCDEF</th>
+											<th colspan="3">GHJKLM</th>
+											<th colspan="3">NPQRS</th>
+											<th colspan="3">TWXYZ</th>
+										</tr>
+										<tr>
+											<td>香港</td><td>北京</td><td>澳门</td>
+											<td>重庆</td><td>台北</td><td>成都</td>
+											<td>广州</td><td>上海</td><td>昆明</td>
+											<td>西安</td><td>深圳</td><td>郑州</td>
+											<td>贵阳</td><td>杭州</td><td>长沙</td>
+										</tr>
+										<tr>
+											<td>哈尔滨</td><td>厦门</td><td>海口</td>
+											<td>武汉</td><td>三亚</td><td>南京</td>
+											<td>青岛</td><td>天津</td><td>大连</td>
+											<td>温州</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+						<div class="mdd-input-wrapper-mv">
+							<p class="mdd-input-wrapper-departure">出发时间</p>
+						</div>
+						<div class="input-row">
+							<!-- 第二行输入框：选择出发日期 -->
+							
+							<input type="date" id="travel-date" class="mdd-input" placeholder="选择出发日期">
+						</div>
+						
+						<div class="mdd-input-container">
+							<button class="buttons">搜索</button>
+						</div>
+					</div>
+				</div>
+				<div id="content3" class="mdd-content-item">
+					<div class="mdd-input-wrapper">
+							<div class="mdd-input-wrapper-mv">
+								<p class="mdd-input-wrapper-departure">目的地</p>
+								<p class="mdd-input-wrapper-destination">关键字</p>
+							</div>
+							<div class="input-row">
+								<!-- 第一行两个输入框：出发地和目的地 -->
+								<input type="text" id="departure" class="mdd-input" placeholder="请输入目的地" readonly>
+								<input type="text" id="destination" class="mdd-input" placeholder="输入位置/酒店名/品牌" readonly>
+								<!-- 出发地的城市下拉框 -->
+								<div id="departure-cities" class="popular-cities-container" style="display: none;">
+									<h2>热门城市（出发地）</h2>
+									<table>
+										<tr>
+											<th colspan="3">热门城市</th>
+											<th colspan="3">ABCDEF</th>
+											<th colspan="3">GHJKLM</th>
+											<th colspan="3">NPQRS</th>
+											<th colspan="3">TWXYZ</th>
+										</tr>
+										<tr>
+											<td>香港</td><td>北京</td><td>澳门</td>
+											<td>重庆</td><td>台北</td><td>成都</td>
+											<td>广州</td><td>上海</td><td>昆明</td>
+											<td>西安</td><td>深圳</td><td>郑州</td>
+											<td>贵阳</td><td>杭州</td><td>长沙</td>
+										</tr>
+										<tr>
+											<td>哈尔滨</td><td>厦门</td><td>海口</td>
+											<td>武汉</td><td>三亚</td><td>南京</td>
+											<td>青岛</td><td>天津</td><td>大连</td>
+											<td>温州</td>
+										</tr>
+									</table>
+								</div>
+								<!-- 目的地的城市下拉框 -->
+								<div id="destination-cities" class="popular-cities-container" style="display: none;">
+									<h2>热门城市（目的地）</h2>
+									<table>
+										<tr>
+											<th colspan="3">热门城市</th>
+											<th colspan="3">ABCDEF</th>
+											<th colspan="3">GHJKLM</th>
+											<th colspan="3">NPQRS</th>
+											<th colspan="3">TWXYZ</th>
+										</tr>
+										<tr>
+											<td>香港</td><td>北京</td><td>澳门</td>
+											<td>重庆</td><td>台北</td><td>成都</td>
+											<td>广州</td><td>上海</td><td>昆明</td>
+											<td>西安</td><td>深圳</td><td>郑州</td>
+											<td>贵阳</td><td>杭州</td><td>长沙</td>
+										</tr>
+										<tr>
+											<td>哈尔滨</td><td>厦门</td><td>海口</td>
+											<td>武汉</td><td>三亚</td><td>南京</td>
+											<td>青岛</td><td>天津</td><td>大连</td>
+											<td>温州</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+						<div class="mdd-input-wrapper-mv">
+							<p class="mdd-input-wrapper-departure">入住时间</p>
+							<p class="mdd-input-wrapper-destination">离店时间</p>
+						</div>
+						<div class="input-row">
+							<!-- 第二行输入框：选择出发日期 -->
+							
+							<input type="date" id="travel-date" class="mdd-input" placeholder="选择入住日期">
+							<input type="date" id="travel-date" class="mdd-input" placeholder="选择离店日期">
+						</div>
+						
+						<div class="mdd-input-container">
+							<button class="buttons">搜索</button>
+						</div>
+					</div>
+				</div>
+				<div id="content4" class="mdd-content-item">
+					<div class="mdd-input-wrapper">
+							<div class="mdd-input-wrapper-mv">
+								<p class="mdd-input-wrapper-departure">出发地</p>
+								<p class="mdd-input-wrapper-destination">目的地</p>
+							</div>
+							<div class="input-row">
+								<!-- 第一行两个输入框：出发地和目的地 -->
+								<input type="text" id="departure" class="mdd-input" placeholder="请输入出发地" readonly>
+								<input type="text" id="destination" class="mdd-input" placeholder="请输入目的地" readonly>
+								<!-- 出发地的城市下拉框 -->
+								<div id="departure-cities" class="popular-cities-container" style="display: none;">
+									<h2>热门城市（出发地）</h2>
+									<table>
+										<tr>
+											<th colspan="3">热门城市</th>
+											<th colspan="3">ABCDEF</th>
+											<th colspan="3">GHJKLM</th>
+											<th colspan="3">NPQRS</th>
+											<th colspan="3">TWXYZ</th>
+										</tr>
+										<tr>
+											<td>香港</td><td>北京</td><td>澳门</td>
+											<td>重庆</td><td>台北</td><td>成都</td>
+											<td>广州</td><td>上海</td><td>昆明</td>
+											<td>西安</td><td>深圳</td><td>郑州</td>
+											<td>贵阳</td><td>杭州</td><td>长沙</td>
+										</tr>
+										<tr>
+											<td>哈尔滨</td><td>厦门</td><td>海口</td>
+											<td>武汉</td><td>三亚</td><td>南京</td>
+											<td>青岛</td><td>天津</td><td>大连</td>
+											<td>温州</td>
+										</tr>
+									</table>
+								</div>
+								<!-- 目的地的城市下拉框 -->
+								<div id="destination-cities" class="popular-cities-container" style="display: none;">
+									<h2>热门城市（目的地）</h2>
+									<table>
+										<tr>
+											<th colspan="3">热门城市</th>
+											<th colspan="3">ABCDEF</th>
+											<th colspan="3">GHJKLM</th>
+											<th colspan="3">NPQRS</th>
+											<th colspan="3">TWXYZ</th>
+										</tr>
+										<tr>
+											<td>香港</td><td>北京</td><td>澳门</td>
+											<td>重庆</td><td>台北</td><td>成都</td>
+											<td>广州</td><td>上海</td><td>昆明</td>
+											<td>西安</td><td>深圳</td><td>郑州</td>
+											<td>贵阳</td><td>杭州</td><td>长沙</td>
+										</tr>
+										<tr>
+											<td>哈尔滨</td><td>厦门</td><td>海口</td>
+											<td>武汉</td><td>三亚</td><td>南京</td>
+											<td>青岛</td><td>天津</td><td>大连</td>
+											<td>温州</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+						<div class="mdd-input-wrapper-mv">
+							<p class="mdd-input-wrapper-departure">出发时间</p>
+						</div>
+						<div class="input-row">
+							<!-- 第二行输入框：选择出发日期 -->
+							
+							<input type="date" id="travel-date" class="mdd-input" placeholder="选择出发日期">
+						</div>
+						
+						<div class="mdd-input-container">
+							<button class="buttons">搜索</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+   <div class="mdd-flex-biao">
+        <p>全部</p>
+        <p>东莞</p>
+        <p>广州</p>
+        <p>深圳</p>
+        <p>佛山</p>
+        <p>北京</p>
+        <p>上海</p>
+        <p>香港</p>
+	</div>
+	<div class="mdd-flex-container-layout">
+		<div class="mdd-flex-item-box">
+			<img src="img/酒店1.jpg" alt="Image" class="image">
+			<div class="text-content">
+				<p class="line1">维也纳酒店（东莞国贸）</p>
+				<p class="line2">
+				    <span class="title">民宿</span>
+				    <span class="price">¥500 <span>起</span></span>
+				</p>
+			</div>
+		</div>
+		<div class="mdd-flex-item-box">
+			<img src="img/酒店2.jpg" alt="Image" class="image">
+			<div class="text-content">
+				<p class="line1">东莞虎门酒店</p>
+				<p class="line2">
+					<span class="title">酒店</span>
+					<span class="price">¥350 <span>起</span></span>
+				</p>
+			</div>
+		</div>
+		<div class="mdd-flex-item-box">
+			<img src="img/酒店3.jpg" alt="Image" class="image">
+			<div class="text-content">
+				<p class="line1">深圳福田酒店</p>
+				<p class="line2">
+					<span class="title">民宿</span>
+					<span class="price">¥420 <span>起</span></span>
+				</p>
+			</div>
+		</div>
+		<div class="mdd-flex-item-box">
+			<img src="img/酒店4.jpg" alt="Image" class="image">
+			<div class="text-content">
+				<p class="line1">广州天汇大酒店</p>
+				<p class="line2">
+					<span class="title">酒店</span>
+					<span class="price">¥600 <span>起</span></span>
+				</p>
+			</div>
+		</div>
+		<div class="mdd-flex-item-box">
+			<img src="img/酒店5.jpg" alt="Image" class="image">
+			<div class="text-content">
+				<p class="line1">上海外滩酒店</p>
+				<p class="line2">
+					<span class="title">民宿</span>
+					<span class="price">¥700 <span>起</span></span>
+				</p>
+			</div>
+		</div>
+		<div class="mdd-flex-item-box">
+			<img src="img/酒店6.jpg" alt="Image" class="image">
+			<div class="text-content">
+				<p class="line1">北京朝阳区酒店</p>
+				<p class="line2">
+					<span class="title">酒店</span>
+					<span class="price">¥550 <span>起</span></span>
+				</p>
+			</div>
+		</div>
+		<div class="mdd-flex-item-box">
+			<img src="img/酒店7.jpg" alt="Image" class="image">
+			<div class="text-content">
+				<p class="line1">广州珠江新城酒店</p>
+				<p class="line2">
+					<span class="title">酒店</span>
+					<span class="price">¥450 <span>起</span></span>
+				</p>
+			</div>
+		</div>
+		<div class="mdd-flex-item-box">
+			<img src="img/酒店8.jpg" alt="Image" class="image">
+			<div class="text-content">
+				<p class="line1">上海南京路酒店</p>
+				<p class="line2">
+					<span class="title">民宿</span>
+					<span class="price">¥550 <span>起</span></span>
+				</p>
+			</div>
+		<!-- 其他div元素以此类推 -->
+	</div>
+
+
+</body>
+<script src="js/5-mdd.js"></script>
+</html>

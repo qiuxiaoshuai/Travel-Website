@@ -1,0 +1,501 @@
+/* 容器 */
+.welcome-message {
+    text-align: center; /* 文字居中 */
+    position: absolute; /* 使用绝对定位 */
+    top: 200px; /* 离顶部的间距（根据导航栏的高度调整） */
+    left: 50%; /* 水平居中 */
+    transform: translateX(-50%); /* 水平居中 */
+    z-index: 1000; /* 确保它在其他元素之上 */
+    width: 100%; /* 宽度100% */
+}
+
+
+/* h1标题样式 */
+.welcome-message h1 {
+    font-family: 'Arial', sans-serif; /* 设置字体 */
+    font-size: 3.5rem; /* 字体大小 */
+    background: linear-gradient(to right, #ff0000, #ffff00); /* 渐变背景，从红色到黄色 */
+    -webkit-background-clip: text; /* 背景裁剪为文本（需要 Webkit 引擎支持） */
+    color: transparent; /* 使文本的实际颜色透明 */
+}
+
+
+/* 动画效果 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 响应式设计：小屏幕适配 */
+@media (max-width: 768px) {
+    .welcome-message h1 {
+        font-size: 2rem; /* 字体稍微小一些 */
+        padding: 15px;
+    }
+}
+
+
+/* 隐藏文件输入框 */
+.file-input {
+    display: none;
+}
+
+/* 头像样式，使头像可点击 */
+.profile-image-container img {
+    cursor: pointer;
+    border-radius: 50%; /* 可选，头像是圆形 */
+    width: 125px; /* 设置头像大小 */
+    height: 125px; /* 设置头像大小 */
+    object-fit: cover; /* 确保图片不会变形 */
+	position: absolute;
+	left: 260px;
+	top: 400px;
+	z-index: 1000; /* 确保它在其他元素之上 */
+}
+
+
+
+/* 下面部分 */
+/* 容器样式 */
+.main-layout-container {
+    display: flex; /* 启用 Flexbox 布局 */
+    justify-content: center; /* 水平居中 */
+    position: relative; /* 确保子元素的绝对定位可以相对于容器定位 */
+    width: 100%; /* 容器宽度100% */
+   height: 100vh; /* 设置容器高度为视口高度 */
+    padding: 0 20px; /* 内边距，可根据需要调整 */
+}
+
+/* 左侧div样式 */
+.left-side-content-box {
+    position: absolute; /* 绝对定位 */
+	height: auto; /* 自适应高度 */
+	top: 7px;
+    left: 100px; /* 左偏移100px */
+    background-color: white; /* 白色背景 */
+    color: #333; /* 字体颜色：深灰色（可根据需要调整） */
+    padding: 20px; /* 内边距 */
+    width: 450px; /* 左边div的宽度，可根据需求调整 */
+	height: 450px;
+/*    border: 2px solid #ccc; /* 边框：2px宽的浅灰色边框 */ */
+    border-radius: 8px; /* 圆角边框 */
+    box-shadow: 0 4px 4px 4px rgba(0, 0, 0, 0.1); /* 阴影效果：水平和垂直偏移，模糊半径，透明度 */
+}
+
+.left-side-content-p{
+	margin-top: 50px;
+	font-family: 'Arial', sans-serif; /* 设置字体 */
+	color: #333;
+	text-align: center; /* 文字居中 */
+	font-size: 30px;
+}
+
+.left-side-content-p-div {
+    display: flex; /* 启用 flex 布局 */
+    justify-content: space-between; /* 使子元素分布在左右两侧 */
+    align-items: center; /* 垂直居中对齐 */
+}
+/* p 标签样式 */
+.left-side-content-p-div p{
+    margin-top: 30px; /* 设置顶部间距 */
+    margin-right: 30px; /* 设置右侧间距 */
+	font-size: 20px;
+}
+
+
+/* 注销按钮样式 */
+.logout-button {
+	margin-top: 20px;
+	margin-left: 160px;
+    display: inline-block;
+    padding: 10px 20px; /* 按钮的内边距 */
+    background-color: #f44336; /* 背景颜色：红色 */
+    color: white; /* 字体颜色：白色 */
+    font-size: 16px; /* 字体大小 */
+    font-family: 'Arial', sans-serif; /* 字体 */
+    text-decoration: none; /* 去掉默认的下划线 */
+    border-radius: 5px; /* 圆角效果 */
+    text-align: center; /* 文字居中 */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* 动画效果 */
+}
+
+/* 悬停效果 */
+.logout-button:hover {
+    background-color: #d32f2f; /* 悬停时的背景颜色：深红色 */
+    transform: translateY(-3px); /* 鼠标悬停时的上移效果 */
+}
+
+/* 点击效果 */
+.logout-button:active {
+    background-color: #b71c1c; /* 点击时的背景颜色：更深的红色 */
+    transform: translateY(0); /* 返回到原始位置 */
+}
+
+/* 给按钮加阴影 */
+.logout-button {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+}
+
+
+.right-side-content-box{
+	position: absolute; /* 绝对定位 */
+	height: auto; /* 自适应高度 */
+	top: 7px;
+    left: 640px; /* 左偏移100px */
+    color: #333; /* 字体颜色：深灰色（可根据需要调整） */
+    padding: 20px; /* 内边距 */
+    width: 960px; /* 左边div的宽度，可根据需求调整 */
+	height: 500px;
+
+}
+
+/* 父容器样式 */
+.right-side-content-container {
+    display: flex; /* 启用 flex 布局 */
+    justify-content: space-between; /* 使子元素有间隔 */
+    flex-wrap: wrap; /* 允许元素换行 */
+	background-color: white; /* 背景色 */
+	    box-shadow: 0 4px 4px 4px rgba(0, 0, 0, 0.1); /* 阴影效果：水平和垂直偏移，模糊半径，透明度 */
+}
+
+/* 每一列的样式 */
+.four-column-item {
+	display: flex;
+    flex-direction: column; /* 图片在文字上方 */
+    align-items: center; /* 居中对齐 */
+    padding: 20px; /* 内边距 */
+    width: 22%; /* 每个项的宽度 */
+    margin: 10px; /* 间距 */
+    text-align: center; /* 文字居中 */
+    border-radius: 8px; /* 圆角 */
+    transition: background-color 0.3s ease; /* 平滑的背景颜色过渡 */
+}
+
+.four-column-item img {
+	width: 50px;
+	margin-bottom: 10px;
+}
+
+.four-column-item:hover {
+    color: #FF6347; /* 字体颜色变为白色 */
+	font-size: 24px;
+}
+
+/* 右侧底部容器 */
+.right-side-content-bottom {
+    position: absolute; /* 绝对定位 */
+    top: 200px; /* 设置距离页面顶部470px */
+    left: 20px; /* 设置距离左侧640px */
+    width: 922px; /* 宽度960px */
+    height: 500px; /* 高度450px */
+    background-color: #f5dc52; /* 背景色为黄色 */
+    color: #333; /* 字体颜色：深灰色 */
+    padding: 20px; /* 内边距 */
+    box-sizing: border-box; /* 包括内边距和边框在内的总宽度和高度 */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* 阴影效果 */
+/*    z-index: 1000; /* 确保它显示在其他元素的上面 */ */
+}
+
+/* 容器样式 */
+.right-side-content-bottom-text {
+    display: block; /* 让整个容器使用块级布局 */
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+/* 用户名样式 */
+.username-text {
+    font-size: 30px;
+    color: #FF6347; /* 设置用户名为番茄色 */
+}
+
+/* p 标签样式 */
+.right-side-content-bottom-text p {
+    word-wrap: break-word; /* 自动换行 */
+    margin: 0; /* 去除p标签默认的上下间距 */
+    line-height: 1.6; /* 设置行高，增加行间距 */
+}
+
+.right-side-content-bottom-text-p{
+	font-size: 24px;
+}
+/* 第二行文本样式 */
+.two-line-text {
+    margin-top: 10px; /* 给第二行文本添加上间距 */
+    font-size: 24px; /* 设置字体大小 */
+    color: #333; /* 设置字体颜色为黑色 */
+}
+
+/* 控制第一行和第二行的间距 */
+.right-side-content-bottom-text p + p {
+    margin-top: 10px; /* 控制两行之间的间距 */
+}
+
+
+/* 三个水平排列的 div */
+/* 三个水平排列的 div */
+.horizontal-divs {
+	margin-top: 20px;
+    display: flex; /* 使用 flexbox 布局 */
+    justify-content: space-between; /* 在水平方向上分布子项 */
+    gap: 5px; /* 设置子项之间的间距 */
+    width: 100%;
+	height: 300px;
+}
+
+/* 单个 div 样式 */
+.horizontal-item {
+    display: flex; /* 启用 flexbox 布局 */
+    flex-direction: column; /* 设置子项垂直排列 */
+    justify-content: center; /* 垂直居中对齐 */
+    align-items: center; /* 水平居中对齐 */
+    background-color: white; /* 背景色 */
+    color: black; /* 文字颜色 */
+    padding: 20px; /* 内边距 */
+    flex: 0 1 30%; /* 防止扩展过大，最大宽度为容器的30% */
+    min-width: 250px; /* 设置每个div的最小宽度 */
+    max-width: 300px; /* 设置每个div的最大宽度 */
+    text-align: center; /* 文字居中 */
+    border-radius: 8px; /* 圆角 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 阴影效果 */
+}
+
+/* 图片样式 */
+.item-image {
+    width: 80px; /* 设置图片宽度 */
+    height: 80px; /* 设置图片高度 */
+    object-fit: cover; /* 保持图片比例 */
+    margin-bottom: 50px; /* 图片与文字之间的间隔 */
+}
+
+/* 文字样式 */
+.item-text {
+    font-size: 16px;
+    margin-bottom: 10px; /* 文字与按钮之间的间隔 */
+}
+
+/* 按钮样式 */
+.item-button {
+    background-color: #FF6347; /* 按钮背景色 */
+    color: white; /* 按钮文字颜色 */
+    padding: 10px 20px; /* 按钮内边距 */
+    border: none; /* 去掉按钮边框 */
+    border-radius: 5px; /* 按钮圆角 */
+    cursor: pointer; /* 鼠标悬停时显示手型 */
+}
+
+/* 悬停按钮样式 */
+.item-button:hover {
+    background-color: #e55347; /* 悬停时按钮背景色 */
+}
+
+/* 完善资料按钮样式 */
+.user-profile-edit-btn {
+    padding: 10px 20px;
+    background-color: #FF6347;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.user-profile-edit-btn:hover {
+    background-color: #e55347;
+}
+
+/* 弹出表单容器样式 */
+.user-profile-modal {
+    display: none; /* 默认隐藏 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* 弹出框内容 */
+.user-profile-modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 弹出框标题 */
+.user-profile-modal-title {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* 关闭按钮 */
+.user-profile-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #888;
+}
+
+.user-profile-close-btn:hover {
+    color: #333;
+}
+
+/* 表单样式 */
+.user-profile-form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 每个表单项容器 */
+.user-profile-form-group {
+    margin-bottom: 20px;
+}
+
+/* 表单标签 */
+.user-profile-form-label {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+/* 输入框和选择框 */
+.user-profile-form-input,
+.user-profile-form-select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.user-profile-form-input:focus,
+.user-profile-form-select:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* 提交按钮 */
+.user-profile-submit-btn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.user-profile-submit-btn:hover {
+    background-color: #45a049;
+}
+
+/* 当表单弹出时，显示 modal */
+.user-profile-modal.show {
+    display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.ger-img {
+    width: 100%;          /* 父容器宽度为100% */
+    height: 400px;         /* 固定容器的高度 */
+    overflow: hidden;     /* 隐藏超出容器的图片部分 */
+}
+
+.ger-img img {
+    width: 100%;          /* 图片宽度自适应父容器宽度 */
+    height: 100%;         /* 图片高度自适应父容器高度 */
+    object-fit: cover;    /* 保证图片充满容器，同时裁剪超出部分 */
+}
+
+
+
+/* 波浪容器 */
+.waves {
+	position: relative;
+	width: 100%;
+	height: 15vh;
+	margin-bottom: -7px;
+	min-height: 70px;
+	max-height: 130px;
+}
+/* 设置波浪容器浮动在图片的上方 */
+.wave-container {
+    position: absolute;
+    top: 340px;  /* 设置波浪区域浮动在图片的上方 */
+    left: 0;
+    width: 100%;
+}
+/* 使用 parallax 使每个波浪层的动画时间和延迟不同 */
+.parallax > use {
+    animation: wave-animation 25s cubic-bezier(.55, .5, .45, .5) infinite;
+}
+
+.parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 5s;
+}
+
+.parallax > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+}
+
+.parallax > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+
+.parallax > use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 5s;
+}
+
+/* 波浪的动画 */
+@keyframes wave-animation {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+    100% {
+        transform: translate3d(85px, 0, 0); /* 波浪从右向左滚动 */
+    }
+}
+
+
+/* 交互 */

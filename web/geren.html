@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人主页</title>
+	<link rel="stylesheet" href="css/3-daohanlan.css" />
+	<link rel="stylesheet" href="css/5-gereng.css" />
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <a href="#">丘小帅的旅游网站</a>
+            </div>
+            <div class="nav-links">
+                <a href="#">首页</a>
+                <a href="#">攻略群</a>
+                <div class="dropdown">
+                    <a href="#" class="dropbtn">去旅行</a>
+                    <div class="dropdown-content">
+                        <a href="#">跟团</a>
+                        <a href="#">飞机</a>
+                        <a href="#">高铁</a>
+                    </div>
+                </div>
+                <a href="#">旅游攻略</a>
+                <a href="#">定酒店</a>
+                <a href="#">关于我们</a>
+            </div>
+			<div class="user-info" id="user-info">
+			        <!-- 用户头像和用户名会在这里动态显示 -->
+			</div>
+        </div>
+    </div>
+	<div class="ger-img">
+		<img src="img/夏威夷to.jpg" alt="" />
+		<div class="wave-container">
+			<svg class="waves" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+				<defs>
+					<!-- 定义波浪路径 -->
+					<path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"/>
+				</defs>
+				<g class="parallax">
+					<!-- 组合波浪形状 -->
+					<use xlink:href="#gentle-wave" x="48" y="10" fill="rgba(255,255,255,0.7)" />
+					<use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+					<use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+					<use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+				</g>
+			</svg>
+		</div>
+	</div>
+	
+    
+</body>
+</html>
